@@ -1,5 +1,488 @@
-<body>
+<html lang="en" xml:lang="en">
 
-<iframe src="https://cde.run/KostaMalsev/videoconverter.js/demo/small.html" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Convert GitHub Pages Link to iframe | Hands-On Data Visualization</title>
+  <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.">
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Convert GitHub Pages Link to iframe | Hands-On Data Visualization">
+  <meta property="og:type" content="book">
+  <meta property="og:url" content="http://handsondataviz.github.io/">
+  <meta property="og:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg">
+  <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.">
+  <meta name="github-repo" content="handsondataviz/book">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Convert GitHub Pages Link to iframe | Hands-On Data Visualization">
+  <meta name="twitter:site" content="@handsondataviz">
+  <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates built with Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.">
+  <meta name="twitter:image" content="http://handsondataviz.github.io//images/cover-400wide.jpg">
+
+  <meta name="author" content="Jack Dougherty">
+  <meta name="author" content="Ilya Ilyankou">
+
+
+  <meta name="date" content="2022-04-04">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="prev" href="copy-leaflet.html">
+  <link rel="next" href="create-repo.html">
+  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+  <script src="libs/jquery-2.2.3/jquery.min.js"></script>
+  <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet">
+  <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet">
+  <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet">
+  <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet">
+  <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet">
+  <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet">
+  <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet">
+
+
+
+
+
+  <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet">
+  <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-5488840-29');
+  </script>
+
+
+  <style type="text/css">
+    pre>code.sourceCode {
+      white-space: pre;
+      position: relative;
+    }
+
+    pre>code.sourceCode>span {
+      display: inline-block;
+      line-height: 1.25;
+    }
+
+    pre>code.sourceCode>span:empty {
+      height: 1.2em;
+    }
+
+    .sourceCode {
+      overflow: visible;
+    }
+
+    code.sourceCode>span {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    pre.sourceCode {
+      margin: 0;
+    }
+
+    @media screen {
+      div.sourceCode {
+        overflow: auto;
+      }
+    }
+
+    @media print {
+      pre>code.sourceCode {
+        white-space: pre-wrap;
+      }
+
+      pre>code.sourceCode>span {
+        text-indent: -5em;
+        padding-left: 5em;
+      }
+    }
+
+    pre.numberSource code {
+      counter-reset: source-line 0;
+    }
+
+    pre.numberSource code>span {
+      position: relative;
+      left: -4em;
+      counter-increment: source-line;
+    }
+
+    pre.numberSource code>span>a:first-child::before {
+      content: counter(source-line);
+      position: relative;
+      left: -1em;
+      text-align: right;
+      vertical-align: baseline;
+      border: none;
+      display: inline-block;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      padding: 0 4px;
+      width: 4em;
+      color: #aaaaaa;
+    }
+
+    pre.numberSource {
+      margin-left: 3em;
+      border-left: 1px solid #aaaaaa;
+      padding-left: 4px;
+    }
+
+    div.sourceCode {}
+
+    @media screen {
+      pre>code.sourceCode>span>a:first-child::before {
+        text-decoration: underline;
+      }
+    }
+
+    code span.al {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    /* Alert */
+    code span.an {
+      color: #60a0b0;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    /* Annotation */
+    code span.at {
+      color: #7d9029;
+    }
+
+    /* Attribute */
+    code span.bn {
+      color: #40a070;
+    }
+
+    /* BaseN */
+    code span.bu {}
+
+    /* BuiltIn */
+    code span.cf {
+      color: #007020;
+      font-weight: bold;
+    }
+
+    /* ControlFlow */
+    code span.ch {
+      color: #4070a0;
+    }
+
+    /* Char */
+    code span.cn {
+      color: #880000;
+    }
+
+    /* Constant */
+    code span.co {
+      color: #60a0b0;
+      font-style: italic;
+    }
+
+    /* Comment */
+    code span.cv {
+      color: #60a0b0;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    /* CommentVar */
+    code span.do {
+      color: #ba2121;
+      font-style: italic;
+    }
+
+    /* Documentation */
+    code span.dt {
+      color: #902000;
+    }
+
+    /* DataType */
+    code span.dv {
+      color: #40a070;
+    }
+
+    /* DecVal */
+    code span.er {
+      color: #ff0000;
+      font-weight: bold;
+    }
+
+    /* Error */
+    code span.ex {}
+
+    /* Extension */
+    code span.fl {
+      color: #40a070;
+    }
+
+    /* Float */
+    code span.fu {
+      color: #06287e;
+    }
+
+    /* Function */
+    code span.im {}
+
+    /* Import */
+    code span.in {
+      color: #60a0b0;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    /* Information */
+    code span.kw {
+      color: #007020;
+      font-weight: bold;
+    }
+
+    /* Keyword */
+    code span.op {
+      color: #666666;
+    }
+
+    /* Operator */
+    code span.ot {
+      color: #007020;
+    }
+
+    /* Other */
+    code span.pp {
+      color: #bc7a00;
+    }
+
+    /* Preprocessor */
+    code span.sc {
+      color: #4070a0;
+    }
+
+    /* SpecialChar */
+    code span.ss {
+      color: #bb6688;
+    }
+
+    /* SpecialString */
+    code span.st {
+      color: #4070a0;
+    }
+
+    /* String */
+    code span.va {
+      color: #19177c;
+    }
+
+    /* Variable */
+    code span.vs {
+      color: #4070a0;
+    }
+
+    /* VerbatimString */
+    code span.wa {
+      color: #60a0b0;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    /* Warning */
+  </style>
+
+  <style type="text/css">
+    /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+    div.csl-bib-body {}
+
+    div.csl-entry {
+      clear: both;
+    }
+
+    .hanging div.csl-entry {
+      margin-left: 2em;
+      text-indent: -2em;
+    }
+
+    div.csl-left-margin {
+      min-width: 2em;
+      float: left;
+    }
+
+    div.csl-right-inline {
+      margin-left: 2em;
+      padding-left: 1em;
+    }
+
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1062.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1062.0">
+
+
+
+  
+
+    <div class="book-body fixed">
+      <div class="body-inner">
+      
+        <iframe src="https://cde.run/KostaMalsev/three.js/examples/physics_ammo_volume.html" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+
+        <div class="book-header fixed" role="navigation" style="background-color: rgb(255, 255, 255);">
+          <a class="btn pull-left js-toolbar-action" aria-label="Toggle Sidebar" title="Toggle Sidebar" href="#"><i class="fa fa-align-justify"></i></a><a class="btn pull-left js-toolbar-action" aria-label="Search" title="Search" href="#"><i class="fa fa-search"></i></a><a class="btn pull-right js-toolbar-action" aria-label="Github" title="Github" href="#"><i class="fa fa-github"></i></a><a class="btn pull-right js-toolbar-action" aria-label="Twitter" title="Twitter" href="#"><i class="fa fa-twitter"></i></a>
+          <div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" title="Font Settings" href="#"><i class="fa fa-font"></i></a>
+            <div class="dropdown-menu dropdown-right">
+              <div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div>
+              <div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div>
+              <div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div>
+              <div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div>
+            </div>
+          </div><a class="btn pull-left js-toolbar-action" aria-label="View Source" title="View Source" href="#"><i class="fa fa-eye"></i></a><a class="btn pull-left js-toolbar-action" aria-label="PDF" title="PDF" href="#"><i class="fa fa-file-pdf-o"></i></a><a class="btn pull-left js-toolbar-action" aria-label="Information about the toolbar" title="Information about the toolbar" href="#"><i class="fa fa-info"></i></a>
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hands-On Data Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+              <header>
+
+                <p style="background-color: #0057B8; margin: 0; padding: 10px 20px; color: white; text-align: center">
+                  #StandWithUkraine - Stop the Russian invasion
+                </p>
+
+                <p style="background-color: #FFD700; margin: 0; padding: 10px 20px; text-align: center">
+                  Join us and donate. All 2022 book royalties will be donated to:<br> <a href="https://savelife.in.ua/en/donate/" target="_blank">Save Life in Ukraine</a> and <a href="https://www.dec.org.uk/appeal/ukraine-humanitarian-appeal" target="_blank">Ukraine Humanitarian Appeal</a>.
+                </p>
+
+              </header>
+              <div id="gh-pages-link-to-iframe" class="section level2 unnumbered">
+                <h2 class="hasAnchor">Convert GitHub Pages Link to iframe<a href="#gh-pages-link-to-iframe" class="anchor-section"></a></h2>
+                <p>In <a href="embed.html">Chapter 9: Embed on the Web</a>, we discussed the benefits of displaying interactive content from a primary site and making it appear seamlessly in a secondary site. You also learned how to convert very long Datawrapper and Tableau Public embed codes into shorter iframe tags when needed, so that you can embed them more easily on a secondary website.</p>
+                <p>The same concept applies to GitHub Pages. When you publish a code template for a chart or map (or any content) on GitHub Pages, it generates an online link that you can convert into an iframe tag, using the same principles as above, to embed it on a secondary website. Follow these steps:</p>
+                <ol style="list-style-type: decimal">
+                  <li>For any GitHub repository you have published online, go to its <em>Settings</em> page and scroll down to copy its GitHub Pages web address, which will appear in this general format:</li>
+                </ol>
+                <p><code>https://USERNAME.github.io/REPOSITORY</code></p>
+                <ol start="2" style="list-style-type: decimal">
+                  <li>Convert it into an iframe by enclosing the link inside quotation marks as the source, and adding both start and end tags, in this general format:</li>
+                </ol>
+                <p><code>&lt;iframe src="https://USERNAME.github.io/RESPOSITORY"&gt;&lt;/iframe&gt;</code></p>
+                <ol start="3" style="list-style-type: decimal">
+                  <li>If desired, improve the iframe appearance on the secondary site by adding any of these optional attributes, such as <code>width</code> or <code>height</code> (measured in pixels by default, or percentages), or <code>frameborder="0"</code> or <code>scrolling="no"</code>, in this general format:</li>
+                </ol>
+                <p><code>&lt;iframe src="https://USERNAME.github.io/RESPOSITORY" width="100%" height="400" frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;</code></p>
+                <p>Tip: Either single-quote (<code>'</code>) marks (also called an apostrophe) or double-quote (<code>"</code>) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.</p>
+                <p>Now you are ready to <a href="paste-code.html">paste your iframe into your preferred website</a>, using methods described in Chapter 9, to display your interactive chart or map template from published repository using GitHub Pages.</p>
+                <p>Now you should have a better sense of how to edit and host code repositories on GitHub. The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.</p>
+              </div>
+              
+              
+              
+
+              <style>
+                footer a:hover img {
+                  transform: rotate(1deg);
+                }
+
+                .db {
+                  display: block;
+                }
+
+                @media screen and (min-width: 30em) {
+                  .dtc-ns {
+                    display: table-cell;
+                    vertical-align: middle;
+                  }
+                }
+              </style>
+            </section>
+
+          </div>
+        </div>
+      </div>
+      <a href="copy-leaflet.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+      <a href="create-repo.html" class="navigation navigation-next " aria-label="Next page" style="margin-right: 0px;"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+  <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+  <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+  <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+  <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+  <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+  <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+  <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+  <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+  <script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+  <script>
+    gitbook.require(["gitbook"], function(gitbook) {
+      gitbook.start({
+        "sharing": {
+          "github": true,
+          "facebook": false,
+          "twitter": true,
+          "linkedin": false,
+          "weibo": false,
+          "instapaper": false,
+          "vk": false,
+          "whatsapp": false,
+          "all": false
+        },
+        "fontsettings": {
+          "theme": "white",
+          "family": "sans",
+          "size": 2
+        },
+        "edit": {
+          "link": null,
+          "text": null
+        },
+        "history": {
+          "link": null,
+          "text": null
+        },
+        "view": {
+          "link": "https://github.com/handsondataviz/book/blob/main/10-github.Rmd",
+          "text": null
+        },
+        "download": ["HandsOnDataViz.pdf"],
+        "toc": {
+          "collapse": "section",
+          "scroll_highlight": true
+        },
+        "search": true
+      });
+    });
+  </script>
+
+
+
 
 </body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
